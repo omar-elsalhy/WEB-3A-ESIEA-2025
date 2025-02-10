@@ -17,12 +17,12 @@
 ##F4E4D7: couleur secondaire
 
 ---
-Inspiration:
+**Inspiration:**
 ![img.png](img.png)
 (Source: https://audacieuses-creatives.com/wp-content/uploads/2023/11/brandboard-1-2048x1554.jpg)
 
 ---
-Une autre idée:
+**Une autre idée:**
 
 Couleurs: 
 
@@ -39,7 +39,7 @@ Couleurs:
 #FCF5F5: couleur secondaire
 
 ---
-Inspiration:
+**Inspiration:**
 ![img_1.png](img_1.png)
 (Source: https://audacieuses-creatives.com/wp-content/uploads/2023/11/exemple-charte-graphique-2048x1451.jpg)
 
