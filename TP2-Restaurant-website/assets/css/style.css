@@ -151,6 +151,29 @@ nav ul li{
     padding-bottom: 80px;
 }
 
+.main-menu{
+    padding-top: 170px;
+}
+
+.menu-images{
+    width:100%;
+    max-width:500px;
+    height:auto;
+}
+
+.section-menu{
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.titre-section-menu{
+    display: flex;
+    justify-content: center;
+}
+
+
+
 main section div p{
     color:var(--primary-color1);
     display: flex;
