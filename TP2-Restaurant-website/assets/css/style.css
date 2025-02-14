@@ -129,7 +129,27 @@ nav ul li{
     text-align: center;
 }
 
+.main-reservation{
+    padding-top: 170px;
+}
 
+.description-reservation{
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+.image-reservation{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    border-radius: 50%;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+.phone-number{
+    padding-bottom: 80px;
+}
 
 main section div p{
     color:var(--primary-color1);
@@ -227,4 +247,5 @@ footer{
     .logo-image{
         padding-bottom: 20px;
     }
+
 }
