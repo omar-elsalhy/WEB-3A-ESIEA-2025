@@ -1,4 +1,4 @@
-## Creating a restaurant website
+# Creating a restaurant website
 
 ## Source du sujet
 https://github.com/yugmerabtene/FISE-ESIEA-WEBDEV-2025/blob/main/TP/TP-02-SITE-RESTAURENT-BOOTSTRAP.md
@@ -17,4 +17,5 @@ https://github.com/yugmerabtene/FISE-ESIEA-WEBDEV-2025/blob/main/TP/TP-02-SITE-R
 ## Images et Droit
 
 Toutes les images utilisée durant le projet sont des images libres de droits récupérées sur le site pixabay.com.
+
 Source: https://pixabay.com/fr/
