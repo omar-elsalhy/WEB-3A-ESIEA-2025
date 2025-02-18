@@ -13,3 +13,8 @@ https://github.com/yugmerabtene/FISE-ESIEA-WEBDEV-2025/blob/main/TP/TP-02-SITE-R
 
 ### Page de réservation
 ![Page de réservation.png](miscellaneous/Page%20de%20r%C3%A9servation.png)
+
+## Images et Droit
+
+Toutes les images utilisée durant le projet sont des images libres de droits récupérées sur le site pixabay.com.
+Source: https://pixabay.com/fr/
