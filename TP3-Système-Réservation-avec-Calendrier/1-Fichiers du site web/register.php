@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Subject = "Email Verification";
         $mail->isHTML(true);
         $mail->Body = "Hello $prenom, <br><br> Click the link below to verify your email: <br>
-                      <a href='http://localhost/verify.php?token=$token'>Verify Email</a>";
+                      <a href='http://localhost/sys-reserv-cal/verify.php?token=$token'>Verify Email</a>";
 
         if (!$mail->send()) {
             throw new Exception("Error sending email.");
