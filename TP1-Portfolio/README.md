@@ -5,4 +5,4 @@ https://github.com/yugmerabtene/FISE-ESIEA-WEBDEV-2025/blob/main/TP/TP-01-PORTFO
 
 
 ### Portfolio screenshot
-![portfolio-screenshot.png](6-Webpage%20files/miscellaneous/portfolio-screenshot.png)
+![portfolio-screenshot.png](6-Fichiers%20web%20du%20portfolio/miscellaneous/portfolio-screenshot.png)
