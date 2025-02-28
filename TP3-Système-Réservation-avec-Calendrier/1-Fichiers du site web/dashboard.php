@@ -7,6 +7,20 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+// Generate a CSRF token if not already set
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Check form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Erreur CSRF : le formulaire est invalide.");
+    }
+
+    // Process the form (e.g., sanitize input, update database)
+}
+
 $user_id = $_SESSION['user_id'];
 $message = "";
 
@@ -56,6 +70,7 @@ $stmt->execute();
 $reservations = $stmt->get_result();
 $stmt->close();
 
+
 // Handle account deletion
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_account'])) {
     try {
@@ -63,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_account'])) {
         $stmt->bind_param("i", $user_id);
         if ($stmt->execute()) {
             session_destroy();
-            header("Location: register.php");
+            header("Location: login.html");
             exit();
         } else {
             throw new Exception("Erreur lors de la suppression du compte.");
@@ -104,6 +119,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_account'])) {
 
         <h3 class="mt-4">Modifier mes informations</h3>
         <form method="POST" class="w-50 mx-auto">
+            <!-- CSRF Token -->
+            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+
             <div class="mb-3">
                 <label class="form-label">Nom</label>
                 <input type="text" name="nom" class="form-control" value="<?= htmlspecialchars($user['nom']) ?>" required>
@@ -133,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_account'])) {
 
 
         <h3 class="mt-4">Prendre un nouveau rendez-vous</h3>
-        <form action="book_appointment.php" method="POST">
+        <form action="book_appointments.php" method="POST">
             <label for="date">Sélectionnez la date:</label>
             <input type="date" name="date" required class="form-control mb-2">
 
@@ -183,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_account'])) {
 
             <button type="submit" class="btn btn-success">Réserver</button>
         </form>
-        
+
 
 
         <h3 class="mt-4">Vos rendez-vous</h3>
